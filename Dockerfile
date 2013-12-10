@@ -13,6 +13,7 @@ RUN echo "deb http://mirror.anl.gov/pub/ubuntu precise main universe" > /etc/apt
 RUN apt-get update
 RUN apt-get install -y build-essential mercurial git-core subversion wget
 
-# go 1.2 tarball
-RUN wget -qO- https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz | tar -C /usr/local -xzf -
+# go tip
+RUN cd /usr/local; hg clone https://code.google.com/p/go
+RUN cd /usr/local/go/src; ./all.bash
 
