@@ -14,5 +14,4 @@ RUN apt-get update
 RUN apt-get install -y build-essential mercurial git-core subversion wget
 
 # go 1.2 tarball
-RUN wget -qO- https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz | tar -C /usr/local -xzf -
-
+RUN wget -qO- https://go.googlecode.com/files/go1.2.1.linux-amd64.tar.gz | tar -C /usr/local -xzf -
